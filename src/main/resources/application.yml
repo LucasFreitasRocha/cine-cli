@@ -1,0 +1,7 @@
+spring:
+  application:
+    clients:
+      movie:
+        url: ${BASE_URL}
+        api-key: ${API_KEY}
+    name: "cine-cli"
