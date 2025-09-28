@@ -9,19 +9,16 @@ import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 
-import static java.lang.IO.println;
-
 @SpringBootApplication
-public class CineCliApplication implements CommandLineRunner {
+public class App implements CommandLineRunner {
     @Autowired
     private ApplicationContext context;
-    void main(String[] args) {
-        SpringApplication.run(CineCliApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        println(args[0]);
         CommandLine commandLine = context.getBean(CommandLine.class);
         commandLine.command(List.of(args));
     }

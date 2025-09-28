@@ -5,13 +5,11 @@ import io.github.lucasfreitasrocha.cine_cli.core.service.SeriesService;
 import io.github.lucasfreitasrocha.cine_cli.core.util.ConverterArgs;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
 @Service
-
 public class CommandLine {
     private final SeriesService service;
 
@@ -29,6 +27,6 @@ public class CommandLine {
             System.out.println("Invalid command");
             return;
         }
-        service.getSeriesInfo(SearchSerieDomain.builder().title( map.get("title")).build());
+        service.getSeriesInfo(SearchSerieDomain.builder().title(map.get("title")).build());
     }
 }
